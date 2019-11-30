@@ -47,6 +47,8 @@ const fi = (function() {
 
     first: (arr, amt = 1) => { return amt > 1 ? arr.slice(0, amt) : arr[0] },
 
+    last: (arr, amt = 1) => { return amt > 1 ? arr.slice(arr.length - amt) : arr[arr.length - 1] },
+
 
   }
 })()
