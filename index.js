@@ -45,7 +45,7 @@ const fi = (function() {
 
     size: object => { return Object.values(object).length },
 
-    first: (array, amount = 1) => { return amount > 1 ? array.slice(0, amount) : array[0] },
+    first: (arr, amt = 1) => { return amt > 1 ? arr.slice(0, amt) : arr[0] },
 
 
   }
