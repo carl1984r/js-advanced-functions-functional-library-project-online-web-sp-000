@@ -81,6 +81,17 @@ const fi = (function() {
       return newArr;
     },
 
+    functions: object => {
+      const keys = object => {
+        const validKeys = [];
+        for(const key in object) {
+          if(typeof object[key] === 'function') { validKeys.push(key) };
+        };
+        return validKeys;
+      };
+      return fi.sortBy(keys(object))
+    }
+
 
   }
 })()
