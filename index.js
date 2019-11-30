@@ -81,15 +81,15 @@ const fi = (function() {
       return newArr;
     },
 
-    functions: object => {
-      const keys = object => {
+    functions: obj => {
+      const keys = obj => {
         const validKeys = [];
-        for(const key in object) {
-          if(typeof object[key] === 'function') { validKeys.push(key) };
+        for(const key in obj) {
+          if(typeof obj[key] === 'function') { validKeys.push(key) };
         };
         return validKeys;
       };
-      return fi.sortBy(keys(object))
+      return fi.sortBy(keys(obj))
     }
 
 
