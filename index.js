@@ -49,6 +49,8 @@ const fi = (function() {
 
     last: (arr, amt = 1) => { return amt > 1 ? arr.slice(arr.length - amt) : arr[arr.length - 1] },
 
+    compact: arr => { return arr.filter(value => !!value) },
+
 
   }
 })()
