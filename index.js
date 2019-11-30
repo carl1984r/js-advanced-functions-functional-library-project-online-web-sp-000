@@ -79,7 +79,7 @@ const fi = (function() {
       const newArr = [];
       for(const key in obj) { newArr.push(obj[key]) };
       return newArr;
-    },	
+    },
 
 
   }
