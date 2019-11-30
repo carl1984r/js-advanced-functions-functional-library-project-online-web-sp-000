@@ -69,7 +69,7 @@ const fi = (function() {
       return newArr;
     },
 
-    keys: obje => {
+    keys: obj => {
       const newArr = [];
       for(const key in obj) { newArr.push(key) };
       return newArr;
