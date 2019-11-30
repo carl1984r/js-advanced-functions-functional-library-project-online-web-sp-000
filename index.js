@@ -51,6 +51,12 @@ const fi = (function() {
 
     compact: arr => { return arr.filter(value => !!value) },
 
+    sortBy: (array, fn = value => value) => {
+      const newArray = [...array];
+      newArray.sort((firstEl, secondEl) => { return fn(firstEl) - fn(secondEl) });
+      return newArray;
+    },	    
+
 
   }
 })()
