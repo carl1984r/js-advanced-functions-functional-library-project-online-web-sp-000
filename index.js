@@ -57,6 +57,12 @@ const fi = (function() {
       return newArr;
     },
 
+    flatten: (val, surfaceLevel = false, newArray = []) => {
+      if(!Array.isArray(val)) { return newArray.push(val) };
+      if(surfaceLevel) { return val.flat() } else { for(const element of val) { fi.flatten(element, false, newArray) } }
+      return newArray;
+    },
+
 
   }
 })()
