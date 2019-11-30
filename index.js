@@ -51,10 +51,10 @@ const fi = (function() {
 
     compact: arr => { return arr.filter(value => !!value) },
 
-    sortBy: (array, fn = value => value) => {
-      const newArray = [...array];
-      newArray.sort((firstEl, secondEl) => { return fn(firstEl) - fn(secondEl) });
-      return newArray;
+    sortBy: (arr, fn = value => value) => {
+      const newArray = [...arr];
+      newArr.sort((firstEl, secondEl) => { return fn(firstEl) - fn(secondEl) });
+      return newArr;
     },
 
 
