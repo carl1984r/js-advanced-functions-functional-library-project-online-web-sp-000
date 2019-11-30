@@ -57,17 +57,17 @@ const fi = (function() {
       return newArr;
     },
 
-    unpack: function(receiver, arr) {
-      for (let val of arr) receiver.push(val);
+    unpack: function(rcvr, arr) {
+      for (let val of arr) rcvr.push(val);
     },
 
-    flatten: function(collection, shallow, newArr = []) {
-      if (!Array.isArray(collection)) return newArr.push(collection);
+    flatten: function(coll, shallow, newArr = []) {
+      if (!Array.isArray(coll)) return newArr.push(coll);
       if (shallow) {
-        for (let val of collection)
+        for (let val of coll)
           Array.isArray(val) ? this.unpack(newArr, val) : newArr.push(val);
       } else {
-        for (let val of collection) {
+        for (let val of coll) {
           this.flatten(val, false, newArr);
         }
       }
