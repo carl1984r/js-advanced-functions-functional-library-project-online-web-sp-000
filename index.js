@@ -69,6 +69,12 @@ const fi = (function() {
       return newArr;
     },
 
+    keys: obje => {
+      const newArr = [];
+      for(const key in obj) { newArr.push(key) };
+      return newArr;
+    },
+
 
   }
 })()
