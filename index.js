@@ -57,17 +57,10 @@ const fi = (function() {
       return newArr;
     },
 
-    flatten: function (collection, shallow, newArr = []) {
-      if (!Array.isArray(collection)) return newArr.push(collection)
-      if (shallow) {
-        for (let val of collection)
-          Array.isArray(val) ? this.unpack(newArr, val) : newArr.push(val)
-      } else {
-        for (let val of collection) {
-          this.flatten(val, false, newArr)
-        }
-      }
-      return newArr
+    flatten: (val, surfaceLevel = false, newArray = []) => {
+      if(!Array.isArray(val)) { return newArray.push(val) };
+      if(surfaceLevel) { return val.flat() } else { for(const element of val) { fi.flatten(element, false, newArray) } }
+      return newArray;
     },
 
     uniq: (arr, whatever, fn = value => value ) => {
