@@ -63,6 +63,12 @@ const fi = (function() {
       return newArray;
     },
 
+    uniq: (array, whatever, fn = value => value ) => {
+      const newArray = [];
+      for(const value of array) { if(!newArray.find(conflict => fn(value) === fn(conflict) )) { newArray.push(value) } };
+      return newArray;
+    },
+
 
   }
 })()
