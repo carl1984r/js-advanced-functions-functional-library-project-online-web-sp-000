@@ -43,7 +43,7 @@ const fi = (function() {
 
     },
 
-    size: object => { return Object.values(object).length },
+    size: obj => { return Object.values(obj).length },
 
     first: (arr, amt = 1) => { return amt > 1 ? arr.slice(0, amt) : arr[0] },
 
