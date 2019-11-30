@@ -53,7 +53,7 @@ const fi = (function() {
 
     sortBy: (arr, fn = value => value) => {
       const newArray = [...arr];
-      newArr.sort((firstEl, secondEl) => { return fn(firstEl) - fn(secondEl) });
+      newArr.sort((firstE, secondE) => { return fn(firstE) - fn(secondE) });
       return newArr;
     },
 
