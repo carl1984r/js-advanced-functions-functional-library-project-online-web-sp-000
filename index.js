@@ -40,7 +40,7 @@ const fi = (function() {
         if(fn(value)) { newArr.push(value) };
       };
       return newArr;
-      
+
     },
 
 
