@@ -43,6 +43,8 @@ const fi = (function() {
 
     },
 
+    size: object => { return Object.values(object).length },
+
 
   }
 })()
